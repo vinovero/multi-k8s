@@ -1,17 +1,17 @@
-# kind: PersistentVolume
-# apiVersion: v1
-# metadata:
-#   name: database-persistent-volume
-#   labels:
-#     type: local
-# spec:
-#   storageClassName: manual
-#   capacity:
-#     storage: 2Gi
-#   accessModes:
-#     - ReadWriteOnce
-#   hostPath:
-#     path: "/data/psql"
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: database-persistent-volume
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/psql"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
