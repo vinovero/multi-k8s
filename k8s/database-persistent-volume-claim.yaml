@@ -5,20 +5,20 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: manual
+  storageClassName: standard
   capacity:
     storage: 2Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/var/lib/postgresql/data"
+    path: "/data/pgdata"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: database-persistent-volume-claim
 spec:
-  storageClassName: manual
+  storageClassName: standard
   accessModes:
     - ReadWriteOnce
   resources:
